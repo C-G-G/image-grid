@@ -1,0 +1,83 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+  box-sizing: border-box;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+section .photo:nth-child(2),
+section .photo:nth-child(5) {
+  display: none;
+}
+
+@media only screen and (min-width: 25em) {
+
+  section .photo:nth-child(2),
+  section .photo:nth-child(5) {
+    display: block;
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+/*
+  section .photo:nth-child(2),
+  section .photo:nth-child(3),
+  section .photo:nth-child(4),
+  section .photo:nth-child(5) {
+    width: 50%;
+  } */
+
+  section .photo {
+    width: 50%;
+  }
+
+  section .photo:first-child {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+
+  section .photo {
+    width: 33.3333%;
+  }
+
+  section .photo:last-child {
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  section .photo:first-child {
+    width: 66.6666%;
+  }
+
+  section .photo:last-child {
+    display: block;
+  }
+
+}
