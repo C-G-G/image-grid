@@ -41,7 +41,7 @@ section .photo:nth-child(5) {
     display: flex;
     flex-wrap: wrap;
   }
-  
+
   section .photo {
     width: 50%;
   }
